@@ -9,28 +9,27 @@ import SwiftUI
 
 struct TopView: View {
     var body: some View {
-        ZStack {
-            Color.backGround.ignoresSafeArea()
-            
-            VStack(spacing: 40) {
-                Image(.brandLogo)
+        NavigationStack {
+            ZStack {
+                Color.backGround.ignoresSafeArea()
                 
-                Text("ご用件をお選びください")
-                    .font(.title)
-                    .padding(20)
-                HStack(spacing: 50) {
-                    Card(text: "担当者呼び出し", size: .medium){
-                        print("ボタンが押されました")
-                    }
-                    Card(text: "配達受付", size: .medium){
-                        print("ボタンが押されました")
+                VStack(spacing: 40) {
+                    Image(.brandLogo)
+                    
+                    Text("ご用件をお選びください")
+                        .font(.title)
+                        .padding(20)
+                    HStack(spacing: 50) {
+                        Card(text: "担当者呼び出し", size: .medium){
+                            print("ボタンが押されました")
+                        }
+                        Card(text: "配達受付", size: .medium){
+                            print("ボタンが押されました")
+                        }
                     }
                 }
-                Card(text: "総合受付", size: .custom(width: 650, height: 200)){
-                    print("ボタンが押されました")
-                }
+                .padding(100)
             }
-            .padding(100)
         }
     }
 }

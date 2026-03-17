@@ -23,14 +23,9 @@ struct Card: View {
     
     let text: String
     let size: CardSize
-    let action: () -> Void
     var body: some View {
-        Button(action: {
-            action()
-        }, label: {
             Text(text)
-                .frame(width: size.sizeValues.w, height: size.sizeValues.h)
-        })
+            .frame(width: size.sizeValues.w, height: size.sizeValues.h)
             .background(Color.white)
             .font(.system(size: 30)).bold()
             .foregroundStyle(Color.buttonText)
@@ -40,4 +35,4 @@ struct Card: View {
     }
 }
 
-#Preview { Card(text: "Test", size: .small, action: {}) }
+#Preview { Card(text: "Test", size: .small) }
