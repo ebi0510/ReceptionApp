@@ -26,9 +26,6 @@ struct TopView: View {
                         print("ボタンが押されました")
                     }
                 }
-                Card(text: "総合受付", size: .custom(width: 650, height: 200)){
-                    print("ボタンが押されました")
-                }
             }
             .padding(100)
         }
