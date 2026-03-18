@@ -24,7 +24,7 @@ struct TopView: View {
                         NavigationLink(destination: UserSearchView()){
                             Card(text: "担当者呼び出し", size: .medium)
                         }
-                        NavigationLink(destination: ContentView()) {
+                        NavigationLink(destination: CompletedView()) {
                             Card(text: "配達受付", size: .medium)
                         }
                     }
