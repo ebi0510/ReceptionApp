@@ -13,15 +13,15 @@ struct UserSearchView: View {
     let colors: [String] = ["Red", "Blue", "Yellow", "Purple", "Orange", "Green", "Pink", "White", "Gray", "Black"]
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(filteredColors, id: \.self) { color in
-                    Text(color)
-                }
+        List {
+            ForEach(filteredColors, id: \.self) { color in
+                Text(color)
             }
-            .navigationTitle("Colors")
         }
+        .navigationTitle("Colors")
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+        
+        
     }
     
     var filteredColors: [String] {
@@ -33,7 +33,7 @@ struct UserSearchView: View {
             return colors.filter { $0.localizedCaseInsensitiveContains(searchText) }
         }
     }
-
+    
 }
 
 
