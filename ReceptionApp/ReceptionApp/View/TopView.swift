@@ -19,12 +19,13 @@ struct TopView: View {
                     Text("ご用件をお選びください")
                         .font(.title)
                         .padding(20)
+                    
                     HStack(spacing: 50) {
-                        Card(text: "担当者呼び出し", size: .medium){
-                            print("ボタンが押されました")
+                        NavigationLink(destination: UserSearchView()){
+                            Card(text: "担当者呼び出し", size: .medium)
                         }
-                        Card(text: "配達受付", size: .medium){
-                            print("ボタンが押されました")
+                        NavigationLink(destination: CompletedView()) {
+                            Card(text: "配達受付", size: .medium)
                         }
                     }
                 }
